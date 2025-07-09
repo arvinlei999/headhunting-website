@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>首页 - 猎才优选</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+  <header class="flex items-center justify-between p-6 bg-white shadow-md sticky top-0 z-50">
+    <div class="text-2xl font-bold text-blue-600">猎才优选</div>
+    <nav class="space-x-6 hidden md:flex">
+      <a href="index.html" class="hover:text-blue-500">首页</a>
+      <a href="positions.html" class="hover:text-blue-500">职位</a>
+      <a href="clients.html" class="hover:text-blue-500">企业客户</a>
+    </nav>
+  </header>
+
+  <section class="max-w-4xl mx-auto py-16 text-center">
+    <h1 class="text-4xl font-bold mb-4">欢迎来到猎才优选</h1>
+    <p class="text-gray-700 mb-8">专注高端人才猎聘，助力企业与人才精准对接。</p>
+    <a href="positions.html" class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700">查看职位</a>
+  </section>
+
+  <button id="back-to-top" class="hidden fixed bottom-6 right-6 bg-blue-600 text-white px-4 py-2 rounded-full shadow-lg hover:bg-blue-700">↑</button>
+
+  <footer class="bg-white border-t py-8 text-center text-gray-500 text-sm">
+    © 2025 猎才优选. 保留所有权利
+  </footer>
+
+  <script>
+    const backToTopBtn = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+      backToTopBtn.classList.toggle('hidden', window.scrollY < 300);
+    });
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>
